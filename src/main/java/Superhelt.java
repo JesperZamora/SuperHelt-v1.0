@@ -15,7 +15,6 @@ public class Superhelt {
         this.styrke = styrke;
     }
 
-
     public String getAliasNavn() {
         return aliasNavn;
     }
@@ -38,6 +37,15 @@ public class Superhelt {
 
     public double getStyrke() {
         return styrke;
+    }
+
+    public String toString(){
+        return "Aliasnavn: " + aliasNavn +"\n"+
+                "Supernavn: " + superNavn +"\n"+
+                "OprindelsesÅr: " + oprindelsesÅr +"\n"+
+                "Menneske: " + menneske +"\n"+
+                "Superkraft: " + superkraft +"\n"+
+                "Styrke: " + styrke;
     }
 
 
