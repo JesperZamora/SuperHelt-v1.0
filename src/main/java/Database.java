@@ -13,7 +13,7 @@ public class Database {
         return superhelteData;
     }
 
-   boolean fundet = true;
+
     public Superhelt findSuperhelt (String navn) {
         for (int i = 0; i <superhelteData.size(); i++) {
             if(superhelteData.get(i).getSuperNavn().equals(navn)) {
