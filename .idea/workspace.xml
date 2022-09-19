@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baecc57d-59f5-470d-a4e5-131f99549f58" name="Changes" comment="Ny Arraylist i Database + ny getter. ToString indsat i Superhelt klasse. do-while loop til at loop programmet + if-else statments i Main klasse. For-each loop i main til at printe superhelte.">
+    <list default="true" id="baecc57d-59f5-470d-a4e5-131f99549f58" name="Changes" comment="Opgave 4 (userStory 5) - Oprettet ny class = UserInterFace og rykket main over i user interface. Lavet metoder for alle &quot;if-statements&quot;. Main er blevet start class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Superhelt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhelt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,12 @@
       <updated>1662973737523</updated>
       <workItem from="1662973740560" duration="5817000" />
       <workItem from="1663003447355" duration="37167000" />
-      <workItem from="1663089439980" duration="20914000" />
+      <workItem from="1663089439980" duration="22130000" />
+      <workItem from="1663227562294" duration="3076000" />
+      <workItem from="1663233895883" duration="92000" />
+      <workItem from="1663237794789" duration="9281000" />
+      <workItem from="1663307404471" duration="19263000" />
+      <workItem from="1663354883050" duration="41485000" />
     </task>
     <task id="LOCAL-00001" summary="Superhelt Main klasse, Superhelt klasse og Database klasse">
       <created>1663020134878</created>
@@ -67,7 +73,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663098628280</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Nyt søgepunkt i menu &quot;søg efter superhelt&quot;. ny metode i database for at finde superheltenavn.">
+      <created>1663175177122</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663175177122</updated>
+    </task>
+    <task id="LOCAL-00004" summary="UML billede">
+      <created>1663233922054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663233922054</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Opgave 4 (userStory 5) - Oprettet ny class = UserInterFace og rykket main over i user interface. Lavet metoder for alle &quot;if-statements&quot;. Main er blevet start class">
+      <created>1663247368009</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663247368009</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +114,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Superhelt Main klasse, Superhelt klasse og Database klasse" />
     <MESSAGE value="Ny Arraylist i Database + ny getter. ToString indsat i Superhelt klasse. do-while loop til at loop programmet + if-else statments i Main klasse. For-each loop i main til at printe superhelte." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ny Arraylist i Database + ny getter. ToString indsat i Superhelt klasse. do-while loop til at loop programmet + if-else statments i Main klasse. For-each loop i main til at printe superhelte." />
+    <MESSAGE value="Nyt søgepunkt i menu &quot;søg efter superhelt&quot;. ny metode i database for at finde superheltenavn." />
+    <MESSAGE value="UML billede" />
+    <MESSAGE value="Opgave 4 (userStory 5) - Oprettet ny class = UserInterFace og rykket main over i user interface. Lavet metoder for alle &quot;if-statements&quot;. Main er blevet start class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Opgave 4 (userStory 5) - Oprettet ny class = UserInterFace og rykket main over i user interface. Lavet metoder for alle &quot;if-statements&quot;. Main er blevet start class" />
   </component>
 </project>

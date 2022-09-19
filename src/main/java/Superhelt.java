@@ -19,8 +19,32 @@ public class Superhelt {
         return aliasNavn;
     }
 
+    public void setAliasNavn(String aliasNavn) {
+        this.aliasNavn = aliasNavn;
+    }
+
     public String getSuperNavn() {
         return superNavn;
+    }
+
+    public void setSuperNavn(String superNavn) {
+       this.superNavn = superNavn;
+    }
+
+    public void setSuperkraft(String superkraft) {
+        this.superkraft = superkraft;
+    }
+
+    public void setOprindelsesÅr(int oprindelsesÅr) {
+        this.oprindelsesÅr = oprindelsesÅr;
+    }
+
+    public void setStyrke (int styrke) {
+        this.styrke = styrke;
+    }
+
+    public void setMenneske(boolean menneske) {
+        this.menneske = menneske;
     }
 
     public boolean getMenneske() {
@@ -40,13 +64,13 @@ public class Superhelt {
     }
 
     public String toString(){
-        return "Aliasnavn: " + aliasNavn +"\n"+
-                "Supernavn: " + superNavn +"\n"+
-                "OprindelsesÅr: " + oprindelsesÅr +"\n"+
-                "Menneske: " + menneske +"\n"+
-                "Superkraft: " + superkraft +"\n"+
+        return "Aliasnavn: " + aliasNavn + "\n" +
+                "Supernavn: "+ superNavn  + "\n" +
+                "Superkraft: " + superkraft  + "\n" +
+                "Menneske: " + menneske + "\n" +
+                "OprindelsesÅr: " + oprindelsesÅr + "\n"+
                 "Styrke: " + styrke;
-    }
 
+    }
 
 }
