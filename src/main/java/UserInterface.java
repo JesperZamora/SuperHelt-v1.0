@@ -1,3 +1,5 @@
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -9,7 +11,9 @@ public class UserInterface {
     public UserInterface() {
         superData = new Database();
         sc = new Scanner(System.in);
+
     }
+
 
     public void startProgram() {
 
@@ -33,19 +37,23 @@ public class UserInterface {
 
     }
 
-
-    public void brugerValgMenu(int brugerValg) {
-        if (brugerValg == 1)
-            indtastSuperhelt();
-        else if (brugerValg == 2)
-            findSuperhelt();
-        else if (brugerValg == 3)
-            udskrivSuperhelt();
-        else if (brugerValg == 4)
-            retOplysninger();
-        else
-        System.exit(9);
+    public void brugerValgMenu (int brugerValg) {
+       switch (brugerValg) {
+           case 1: indtastSuperhelt();
+               break;
+           case 2: findSuperhelt();
+               break;
+           case 3: udskrivSuperhelt();
+               break;
+           case 4: retOplysninger();
+               break;
+           case 9:
+               System.out.println("Lukker program. Farvel!");
+           default:
+               System.out.println("Forkert menupunkt! Prøv igen.");
+       }
     }
+
 
     // TODO: Hvis der er tid, så prøv at lav metode med undermenu
     /*
@@ -56,6 +64,7 @@ public class UserInterface {
                 6. Tilbage til: Menupunkter""");
 
         while (brugerValg != 9) {
+
             if (brugerValg == 5) {
                 indtastSuperhelt();
             } else if (brugerValg == 6) {
@@ -65,10 +74,11 @@ public class UserInterface {
             brugerValgMenu(brugerValg);
         }
     }
-
      */
 
 
+
+    //punkt 1 - indtast superhelt
     public void indtastSuperhelt() {
 
         System.out.println(BLACK_UNDERLINED+"\nIndtast data på superhelt"+RESET);
@@ -102,6 +112,7 @@ public class UserInterface {
         superData.tilføjSuperhelt(aliasNavn, superNavn, oprindelsesÅr, menneske, superkraft, styrke);
     }
 
+    // punkt 2 - find superhelt
     public void findSuperhelt() {
         System.out.print("\nIndtast superheltens aliasnavn, supernavn og tryk ENTER: ");
         String findHelt = sc.next();
@@ -114,18 +125,20 @@ public class UserInterface {
 
     }
 
+    // punkt 3 - find alle superhelte
     public void udskrivSuperhelt() {
         System.out.println(BLACK_UNDERLINED+"\nAlle superhelte i databasen"+RESET);
         for (Superhelt superhelt : superData.getSuperhelteData()) {
-            System.out.println(superhelt);
+            System.out.println(superhelt + "\n");
         }
 
     }
 
-
+    // punkt 4 - rediger superhelt
     public void retOplysninger() {
+
         for (int i = 0; i <superData.getSuperhelteData().size(); i++) {
-            System.out.println(BLACK_UNDERLINED+"\nSuperhelt Nr. "+i+1 + ":\n"+RESET + superData.getSuperhelteData());
+            System.out.println(i+1 + ":\n"+ superData.getSuperhelteData().get(i)+ "\n");
         }
 
         System.out.println();
@@ -134,7 +147,6 @@ public class UserInterface {
         sc.nextLine();
 
         Superhelt retSuperhelt = superData.getSuperhelteData().get(nr-1);
-
 
         System.out.println("\nSpring datapunkt over tryk ENTER.");
         System.out.println(BLACK_UNDERLINED + "Rediger data og tryk ENTER for at gemme."+ RESET);
@@ -161,21 +173,17 @@ public class UserInterface {
         System.out.print("Er superhelt menneske (ja/nej): ");
         String nytMenneske;
 
-        do {
-            nytMenneske = sc.nextLine();
-            boolean nyM = false;
-            if(!nytMenneske.isEmpty()) {
-                if (nytMenneske.equalsIgnoreCase("ja")) {
-                    nyM = true;
-                } else if (nytMenneske.equalsIgnoreCase("nej")) {
-                    nyM = false;
-                } else {
-                    System.out.println("Du skal skrive JA eller NEJ");
-                }
+        nytMenneske = sc.nextLine();
+        boolean nyM = false;
+        if(!nytMenneske.isEmpty()) {
+            if (nytMenneske.equalsIgnoreCase("ja")) {
+                nyM = true;
+            } else if (nytMenneske.equalsIgnoreCase("nej")) {
+                nyM = false;
+            } else {
+                System.out.println("Du skal skrive JA eller NEJ");
             }
-
-        } while (nytMenneske != "ja" || nytMenneske != "nej");
-
+        }
 
         System.out.print("Oprindelsesår " + retSuperhelt.getOprindelsesÅr() +": ");
         String nytOprindelsesår = sc.nextLine();
@@ -212,35 +220,7 @@ public class UserInterface {
     public static final String BLACK_UNDERLINED = "\033[4;30m";  // BLACK
     public static final String BLACK_BOLD = "\033[1;30m";  // BLACK BLOD
     public static final String RED = "\033[0;31m";     // RED
-    /*
-    try {
-        checkInteger();
-    }
-    catch (IllegalAccessException e) {
-        System.out.println(checkInteger.getMessage());
-    }
-    l
-     */
 
-    /*
-    public void checkInteger(brugerValg) {
-        for (brugerValg > 9) {
-            throw new IllegalArgumentException("Kun tal mindre end 9");
-        }
-    }
 
- */
-    /*
-            sc.nextLine();
-        System.out.print("Indtast superheltens oprindelsesår: ");
-    int oprindelsesÅr = læsInteger();
-
-        while (!sc.hasNextInt()) {  //Loop
-            int text = sc.nextInt();
-            System.out.println("Dette" + text + "er ikke et tal. Prøv igen.");
-        }
-        int oprindelsesÅr = sc.nextInt();
-
-         */
 
 }
