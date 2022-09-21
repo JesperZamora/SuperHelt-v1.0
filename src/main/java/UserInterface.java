@@ -11,9 +11,7 @@ public class UserInterface {
     public UserInterface() {
         superData = new Database();
         sc = new Scanner(System.in);
-
     }
-
 
     public void startProgram() {
 
@@ -26,6 +24,7 @@ public class UserInterface {
                 2. Find superhelt
                 3. Find alle superhelte
                 4. Rediger superhelt
+                5. Slet superhelt
                 9. Luk program
                 """);
 
@@ -46,6 +45,8 @@ public class UserInterface {
            case 3: udskrivSuperhelt();
                break;
            case 4: retOplysninger();
+               break;
+           case 5: deleteSuperhelt();
                break;
            case 9:
                System.out.println("Lukker program. Farvel!");
@@ -114,6 +115,7 @@ public class UserInterface {
 
     // punkt 2 - find superhelt
     public void findSuperhelt() {
+        //int i = 0;
         System.out.print("\nIndtast superheltens aliasnavn, supernavn og tryk ENTER: ");
         String findHelt = sc.next();
         Superhelt superhelt = superData.findSuperhelt(findHelt);
@@ -199,6 +201,30 @@ public class UserInterface {
 
     }
 
+    // delete Superhelt
+    public void  deleteSuperhelt () {
+        // Finder alle Superhelte i ArrayListen (Databasen)
+        for (int i = 0; i <superData.getSuperhelteData().size(); i++) {
+            System.out.println(i+1 + ":\n"+ superData.getSuperhelteData().get(i)+ "\n");
+        }
+
+        int nr;
+        do {
+            System.out.println();
+            System.out.print("Indtast nr. og tryk ENTER for at slette: ");
+
+            nr = læsInteger();
+            sc.nextLine();
+            if (nr <= superData.getSuperhelteData().size()) { // if = Hvis indtastet tal matcher Supersupeltens plads i Arraylisten = slet
+                superData.getSuperhelteData().remove(nr-1);
+                System.out.println(RED+"\nSuperhelt slettet!"+RESET);
+            } else {
+                System.out.println(RED+"Forkert nummer. Prøv igen!"+RESET); // else = servicebesked
+            }
+
+        } while (nr > superData.getSuperhelteData().size());
+
+    }
 
     public int læsInteger() {
         while (!sc.hasNextInt()) {  //Loop

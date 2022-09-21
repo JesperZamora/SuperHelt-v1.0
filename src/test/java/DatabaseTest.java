@@ -1,63 +1,46 @@
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DatabaseTest {
+    Superhelt s1;
+    Superhelt s2;
+    Database database;
 
-    @Test
-    void arraylistLargerThanZero() {
 
-        //Arrange
-        Database database = new Database();
+    @BeforeEach
+    void setUp () {
+        //test fixture
+        database = new Database();
+        s1 = new Superhelt("Jesper", "Wolff", 1990, true, "lille", 1000); // Hardcode superhelt 1
+        s2 = new Superhelt("Paul", "Wolff", 1991, true, "Stor", 1200); // Hardcode superhelt 2
+        database.getSuperhelteData().addAll(List.of(s1, s2));
 
-        //Act
-        database.tilføjSuperhelt("Jesper", "Wolff", 1990, true, "Lille", 1200);
-
-        //Assert
-        assertTrue(database.getSuperhelteData().size() > 0);
-    }
-
-    @Test
-    void arraylistNotEqualsToNull() {
-        //Arrange
-        Database database = new Database();
-
-        //Act
-        database.tilføjSuperhelt("Jesper", "Wolff", 1990, true, "Lille", 1200);
-
-        //Assert
-        assertNotEquals(database.getSuperhelteData().get(0), null);
     }
 
     @Test
-    void arraylistSizeEqualsToOne() {
-        //Arrange
-        Database database = new Database();
+    void testTilføjSuperhelt() { // Tester metoden ved at tilføje en tredje superhelt (udover de 3 hardcodet)
 
-        //Act
-        database.tilføjSuperhelt("Jesper", "Wolff", 1990, true, "Lille", 1200);
+        int expectedSize = 3;
 
-        //Assert
-        assertEquals(database.getSuperhelteData().size(), 1);
+        database.tilføjSuperhelt("Osama", "Wolff", 1990, true, "Lille", 1200);
+
+        assertEquals(expectedSize, database.getSuperhelteData().size());
     }
 
     @Test
-    void arraylistSizeEquelsToZero() {
-        //Arrange
-        Database database = new Database();
-
-        //Assert
-        assertEquals(database.getSuperhelteData().size(), 0);
+    void testFindSuperhelt() {
+        String expectedAliasNavn = "Jesper";
+        assertEquals(expectedAliasNavn, s1.getAliasNavn());
     }
-
 
     @Test
-    void findSuperheltNameNotEqual() {
-        Database database = new Database();
-
-        database.tilføjSuperhelt("Jesper", "Wolff", 1990, true, "Lille", 1200);
-
-        assertNotEquals(database.getSuperhelteData().equals("Jesper"), "Jesper");
-
+    void testFindSuperheltNavn() {
+        String expectedAliasNavn = "Kokos";
+        assertEquals(expectedAliasNavn, s1.getAliasNavn());
     }
+
 }

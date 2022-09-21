@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
-    private ArrayList<Superhelt> superhelteData = new ArrayList();
+    private ArrayList<Superhelt> superhelteData = new ArrayList<Superhelt>();
 
     public void tilføjSuperhelt(String aliasNavn, String superNavn, int oprindelsesÅr, boolean menneske, String superkraft, double styrke) {
 
@@ -13,6 +14,7 @@ public class Database {
     public ArrayList<Superhelt> getSuperhelteData() {
         return superhelteData;
     }
+
 
     public Superhelt findSuperhelt (String navn) {
         for (int i = 0; i <superhelteData.size(); i++) {
@@ -30,6 +32,7 @@ public class Database {
         }
         return null;
     }
+
 
 
 }
