@@ -43,14 +43,6 @@ public class Superhelt {
         this.styrke = styrke;
     }
 
-    public void setMenneske(boolean menneske) {
-        this.menneske = menneske;
-    }
-
-    public boolean getMenneske() {
-        return menneske;
-    }
-
     public int getOprindelsesÅr() {
         return oprindelsesÅr;
     }
@@ -64,10 +56,15 @@ public class Superhelt {
     }
 
     public String toString(){
+        String tekst;
+        if (menneske)
+            tekst = "Ja";
+        else
+            tekst = "Nej";
         return "Aliasnavn: " + aliasNavn + "\n" +
                 "Supernavn: "+ superNavn  + "\n" +
                 "Superkraft: " + superkraft  + "\n" +
-                "Menneske: " + menneske + "\n" +
+                "Menneske: " + tekst + "\n" +
                 "OprindelsesÅr: " + oprindelsesÅr + "\n"+
                 "Styrke: " + styrke;
 
