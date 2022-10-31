@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
     private ArrayList<Superhelt> superhelteData = new ArrayList<>();
@@ -15,19 +16,19 @@ public class Database {
         return superhelteData;
     }
 
-
     public ArrayList<Superhelt> findSuperhelt (String navn) {
         ArrayList<Superhelt> superhelte = new ArrayList<>();
 
         for (Superhelt superhelt : superhelteData) {
             if(superhelt.getAliasNavn().contains(navn)) {
                 superhelte.add(superhelt);
+            } else if(superhelt.getSuperNavn().contains(navn)){
+
             }
         }
         return superhelte;
-
     }
-    /* Test superhelte
+     //Test superhelte
     public Database(){
 
         superhelteData.add(new Superhelt("Malou", "Wolff", 1990, true, "lille", 1000));
@@ -40,8 +41,6 @@ public class Database {
         superhelteData.addAll(List.of(s3, s4));
 
     }
-
-     */
 
 
 }

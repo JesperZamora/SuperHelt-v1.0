@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.3356223" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baecc57d-59f5-470d-a4e5-131f99549f58" name="Changes" comment="Opgave 4 (userStory 5) - Oprettet ny class = UserInterFace og rykket main over i user interface. Lavet metoder for alle &quot;if-statements&quot;. Main er blevet start class">
+    <list default="true" id="baecc57d-59f5-470d-a4e5-131f99549f58" name="Changes" comment="Søgning efter superhelt virker, så den finder flere super helte med samme indhold af alias navn.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Superhelt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhelt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -34,14 +37,84 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/jespe/Documents/Java/SuperHelt-v1.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="SuperHelt-v1.0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHelt-v1.0" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.testFindSuperhelt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHelt-v1.0" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="testFindSuperhelt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.testFindSuperheltNavn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHelt-v1.0" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="testFindSuperheltNavn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest.testTilføjSuperhelt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SuperHelt-v1.0" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="testTilføjSuperhelt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DatabaseTest.testTilføjSuperhelt" />
+        <item itemvalue="JUnit.DatabaseTest.testFindSuperhelt" />
+        <item itemvalue="JUnit.DatabaseTest.testFindSuperheltNavn" />
+        <item itemvalue="JUnit.DatabaseTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +130,16 @@
       <workItem from="1663233895883" duration="92000" />
       <workItem from="1663237794789" duration="9281000" />
       <workItem from="1663307404471" duration="19263000" />
-      <workItem from="1663354883050" duration="41485000" />
+      <workItem from="1663354883050" duration="120076000" />
+      <workItem from="1664000642930" duration="20696000" />
+      <workItem from="1664191512046" duration="3000" />
+      <workItem from="1664191692820" duration="2855000" />
+      <workItem from="1664264706685" duration="12000" />
+      <workItem from="1664264935758" duration="1837000" />
+      <workItem from="1664280766742" duration="1781000" />
+      <workItem from="1664436425049" duration="41352000" />
+      <workItem from="1666011850021" duration="3689000" />
+      <workItem from="1667199136871" duration="10593000" />
     </task>
     <task id="LOCAL-00001" summary="Superhelt Main klasse, Superhelt klasse og Database klasse">
       <created>1663020134878</created>
@@ -94,7 +176,35 @@
       <option name="project" value="LOCAL" />
       <updated>1663247368009</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Nyt layout i consollen. Opryddet kode i user interface. gjort koden mererobust ved at catach fejlindtastninger ved int og doubles. man kan nu regiere en superhelt.">
+      <created>1663628907007</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663628907007</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Switch case + unit test">
+      <created>1663712848052</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663712848052</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Delete superhelt tilføjet + den looper med besked, hvis man ikke taster korrekt tal værdi. Ny Junit-Test lavet">
+      <created>1663766994163</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663766994163</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Søgning efter superhelt virker, så den finder flere super helte med samme indhold af alias navn.">
+      <created>1663888702914</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663888702914</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +227,10 @@
     <MESSAGE value="Nyt søgepunkt i menu &quot;søg efter superhelt&quot;. ny metode i database for at finde superheltenavn." />
     <MESSAGE value="UML billede" />
     <MESSAGE value="Opgave 4 (userStory 5) - Oprettet ny class = UserInterFace og rykket main over i user interface. Lavet metoder for alle &quot;if-statements&quot;. Main er blevet start class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Opgave 4 (userStory 5) - Oprettet ny class = UserInterFace og rykket main over i user interface. Lavet metoder for alle &quot;if-statements&quot;. Main er blevet start class" />
+    <MESSAGE value="Nyt layout i consollen. Opryddet kode i user interface. gjort koden mererobust ved at catach fejlindtastninger ved int og doubles. man kan nu regiere en superhelt." />
+    <MESSAGE value="Switch case + unit test" />
+    <MESSAGE value="Delete superhelt tilføjet + den looper med besked, hvis man ikke taster korrekt tal værdi. Ny Junit-Test lavet" />
+    <MESSAGE value="Søgning efter superhelt virker, så den finder flere super helte med samme indhold af alias navn." />
+    <option name="LAST_COMMIT_MESSAGE" value="Søgning efter superhelt virker, så den finder flere super helte med samme indhold af alias navn." />
   </component>
 </project>

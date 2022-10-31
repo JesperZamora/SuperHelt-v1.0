@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,7 +10,6 @@ public class UserInterface {
     public UserInterface() {
         superData = new Database();
         sc = new Scanner(System.in);
-
     }
 
     public void startProgram() {
@@ -34,7 +32,6 @@ public class UserInterface {
             brugerValgMenu(brugerValg);
         }
         while (brugerValg != 9);
-
     }
 
     public void brugerValgMenu (int brugerValg) {
@@ -95,9 +92,9 @@ public class UserInterface {
 
     // punkt 2 - find superhelt
     public void findSuperhelt() {
-
         System.out.print("\nIndtast superheltens aliasnavn og tryk ENTER: ");
         String findHelt = sc.next();
+
         ArrayList<Superhelt> superhelte = superData.findSuperhelt(findHelt);
         if (superhelte.size() == 0) {
             System.out.println("Din søgning gav intet resultat");
@@ -210,6 +207,7 @@ public class UserInterface {
         } while (nr > superData.getSuperhelteData().size()+1);
 
     }
+
 
     public int læsInteger() {
         while (!sc.hasNextInt()) {  //Loop
